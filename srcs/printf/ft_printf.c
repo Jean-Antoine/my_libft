@@ -6,13 +6,13 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 09:50:41 by jeada-si          #+#    #+#             */
-/*   Updated: 2023/12/08 10:55:49 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/15 18:19:46 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	ft_max(size_t a, size_t b)
+static size_t	ft_max_(size_t a, size_t b)
 {
 	if (a < b)
 		return (b);
@@ -24,7 +24,7 @@ static void	ft_printfld(t_field *field)
 	if (!field->str)
 		return ;
 	if (field->type == 'c')
-		ft_putstr_f(field->str, ft_max(field->width, 1));
+		ft_putstr_f(field->str, ft_max_(field->width, 1));
 	else
 		ft_putstr(field->str);
 }

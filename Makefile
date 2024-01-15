@@ -32,7 +32,11 @@ SRCS_BASE =					ft_isalpha.c\
 							ft_putstr_fd.c\
 							ft_putendl_fd.c\
 							ft_putnbr_fd.c\
-							ft_atof.c
+							ft_atof.c\
+							ft_min.c\
+							ft_max.c\
+							ft_abs.c\
+							ft_max_array.c
 SRCS_LIST =					ft_lstnew_bonus.c\
 							ft_lstadd_front_bonus.c\
 							ft_lstsize_bonus.c\
