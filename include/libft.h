@@ -6,7 +6,7 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:24:25 by jeada-si          #+#    #+#             */
-/*   Updated: 2024/01/15 18:18:18 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/16 09:11:56 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,6 @@ int	ft_max(int a, int b);
 int	ft_min(int a, int b);
 int	ft_abs(int a);
 int	ft_max_array(int *n, int size);
+int	ft_min_array(int *n, int size);
 
 #endif
