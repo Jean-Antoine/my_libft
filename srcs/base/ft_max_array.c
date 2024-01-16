@@ -6,7 +6,7 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 18:15:26 by jeada-si          #+#    #+#             */
-/*   Updated: 2024/01/16 13:33:28 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:37:50 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_max_array(int *n, int size)
 	int	i;
 	int	max;
 
-	i = 1;
+	i = 0;
 	max = *n;
-	while (i < size)
+	while (++i < size)
 		if (n[i] > max)
 			max = n[i];
 	return (max);

@@ -6,7 +6,7 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 09:10:43 by jeada-si          #+#    #+#             */
-/*   Updated: 2024/01/16 13:33:11 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/16 13:37:39 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	ft_min_array(int *n, int size)
 	int	i;
 	int	min;
 
-	i = 1;
+	i = 0;
 	min = *n;
-	while (i < size)
+	while (++i < size)
 		if (n[i] < min)
 			min = n[i];
 	return (min);
