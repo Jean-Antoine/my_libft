@@ -70,7 +70,7 @@ SRCS = 						$(addprefix ./srcs/base/, $(SRCS_BASE))\
 							$(addprefix ./srcs/list/, $(SRCS_LIST))\
 							$(addprefix ./srcs/gnl/, $(SRCS_GNL))\
 							$(addprefix ./srcs/printf/, $(SRCS_PRINTF))
-						
+HEADER_D =					./include/
 OBJS = $(SRCS:.c=.o)
 NAME = libft.a
 CC = cc
@@ -92,3 +92,4 @@ re: fclean all
 
 norme:
 	norminette $(SRCS)
+	norminette -R CheckDefine $(HEADER_D)

@@ -6,7 +6,7 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:24:25 by jeada-si          #+#    #+#             */
-/*   Updated: 2024/01/16 09:11:56 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/19 08:38:46 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,10 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-int	ft_max(int a, int b);
-int	ft_min(int a, int b);
-int	ft_abs(int a);
-int	ft_max_array(int *n, int size);
-int	ft_min_array(int *n, int size);
+int		ft_max(int a, int b);
+int		ft_min(int a, int b);
+int		ft_abs(int a);
+int		ft_max_array(int *n, int size);
+int		ft_min_array(int *n, int size);
 
 #endif
