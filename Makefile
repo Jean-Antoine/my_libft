@@ -37,7 +37,8 @@ SRCS_BASE =					ft_isalpha.c\
 							ft_max.c\
 							ft_abs.c\
 							ft_max_array.c\
-							ft_min_array.c
+							ft_min_array.c\
+							ft_free_tab.c
 SRCS_LIST =					ft_lstnew_bonus.c\
 							ft_lstadd_front_bonus.c\
 							ft_lstsize_bonus.c\
