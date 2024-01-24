@@ -6,7 +6,7 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 14:29:45 by jeada-si          #+#    #+#             */
-/*   Updated: 2023/11/27 20:52:45 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:49:04 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ char	*ft_strppd_c(char *str, char c)
 
 	length = ft_strlen(str);
 	out = (char *)ft_calloc(length + 2, sizeof(char));
+	if (!out)
+	{
+		free(str);
+		return (NULL);
+	}
 	*out = c;
 	ft_strlcpy(&out[1], str, length + 1);
 	free(str);
