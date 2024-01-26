@@ -6,7 +6,7 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:24:25 by jeada-si          #+#    #+#             */
-/*   Updated: 2024/01/24 11:20:39 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/26 14:30:21 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 double	ft_atof(const char *nptr);
-void	ft_free_tab(char **tab);
+void	ft_free_tab(void **tab);
 
 typedef struct s_list
 {
