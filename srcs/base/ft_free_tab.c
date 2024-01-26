@@ -6,7 +6,7 @@
 /*   By: jeada-si <jeada-si@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:12:30 by jeada-si          #+#    #+#             */
-/*   Updated: 2024/01/26 14:27:51 by jeada-si         ###   ########.fr       */
+/*   Updated: 2024/01/26 14:35:57 by jeada-si         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_free_tab(void **tab)
 {
-	char	**tab_;
+	void	**tab_;
 
 	if (!tab)
 		return ;
