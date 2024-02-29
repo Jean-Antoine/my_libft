@@ -1,3 +1,9 @@
+SRCS_D =					./srcs/
+OBJS_D =					./objs/
+BASE_D =					/base/
+PRINTF_D =					/printf/
+GNL_D =						/gnl/
+LIST_D =					/list/
 SRCS_BASE =					ft_isalpha.c\
 							ft_isdigit.c\
 							ft_isalnum.c\
@@ -66,31 +72,42 @@ SRCS_PRINTF =				ft_printf.c\
 							ft_applyhexprefix.c\
 							ft_applywidth.c\
 							ft_fldmap.c \
-							ft_clearfldlst.c 
-SRCS = 						$(addprefix ./srcs/base/, $(SRCS_BASE))\
-							$(addprefix ./srcs/list/, $(SRCS_LIST))\
-							$(addprefix ./srcs/gnl/, $(SRCS_GNL))\
-							$(addprefix ./srcs/printf/, $(SRCS_PRINTF))
+							ft_clearfldlst.c
+SRCS_F = 					$(addprefix $(BASE_D), $(SRCS_BASE))\
+							$(addprefix $(LIST_D), $(SRCS_LIST))\
+							$(addprefix $(GNL_D), $(SRCS_GNL))\
+							$(addprefix $(PRINTF_D), $(SRCS_PRINTF))
+SRCS =						$(addprefix $(SRCS_D), $(SRCS_F))
+OBJS =						$(addprefix $(OBJS_D), $(SRCS_F:.c=.o))
 HEADER_D =					./include/
-OBJS = $(SRCS:.c=.o)
-NAME = libft.a
-CC = cc
-CPPFLAGS = -I./include/
-CFLAGS = -Wall -Wextra -Werror
+NAME =						libft.a
+CC =						cc
+CPPFLAGS =					-I./include/
+CFLAGS =					-Wall -Wextra -Werror
 
-all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar crs $@ $?
+all: 						$(NAME)	
+
+$(OBJS_D)%.o:				$(SRCS_D)%.c
+							@mkdir -p $(addprefix $(OBJS_D), $(BASE_D) $(PRINTF_D) $(GNL_D) $(LIST_D))
+							$(CC) $(CPPFLAGS) -c $(CFLAGS) $< -o $@
+
+$(NAME): 					$(OBJS)							
+							ar crs $@ $?
 
 clean:
-	rm -f $(OBJS)
+							rm -fdr $(OBJS_D)
 
-fclean: clean
-	rm -f $(NAME)
+fclean: 					clean
+							rm -f $(NAME)
 
-re: fclean all
+re: 						fclean all
 
 norme:
-	norminette $(SRCS)
-	norminette -R CheckDefine $(HEADER_D)
+							norminette $(SRCS)
+							norminette -R CheckDefine $(HEADER_D)
+
+.PHONY:						mkdir_obj
+
+echo:						
+							echo $(addprefix $(OBJS_D), $(BASE_D) $(PRINTF_D) $(GNL_D) $(LIST_D))
